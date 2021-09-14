@@ -20,6 +20,7 @@ int main(int argc, char **argv)
         printf("Error al crear el proceso");
         return -1;
     case 0: ;/* Código ejecutado por el hijo */
+        argv[0] = "./variadicaProm";
         execv("./variadicaProm",argv);
         break;
     default:
@@ -32,6 +33,7 @@ int main(int argc, char **argv)
             printf("Error al crear el proceso");
             return -1;
         case 0: ;/* Código ejecutado por el hijo */
+            argv[0] = "./variadicaMin";
             execv("./variadicaMin",argv);
             break;
         default: /* Código ejecutado por el padre */
@@ -42,6 +44,7 @@ int main(int argc, char **argv)
                 printf("Error al crear el proceso");
                 return -1;
             case 0: ;/* Código ejecutado por el hijo */
+                argv[0] = "./variadicaMax";
                 execv("./variadicaMax",argv);
                 break;
             default:           /* Código ejecutado por el padre */
