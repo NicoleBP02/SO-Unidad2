@@ -5,7 +5,7 @@
 int x = 0;
 
 void* function(void *parg){
-    for(int i = 0; i< 100; i++)x++;
+    for(int i = 0; i< 1000; i++)x++;
     return NULL;
 }
 
